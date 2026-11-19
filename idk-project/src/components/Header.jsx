@@ -1,7 +1,9 @@
-export function Header() {
+import './Header.css'
+
+export function Header({ children }) {
   return (
-    <div>
-      
+    <div className="header-container">
+      {children}
     </div>
   )
 }
