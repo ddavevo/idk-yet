@@ -1,7 +1,8 @@
+/* DEFAULT/LIGHT MODE */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #ffffff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -30,6 +31,7 @@
   }
 }
 
+/* DARK MODE - CAN TOGGLE BETWEEN 'DARK' AND 'LIGHT' */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -50,10 +52,12 @@
   }
 }
 
+/* BASIC HTML FORMATTING */
 body {
   margin: 0;
 }
 
+/* DEFAULT STYLES FOR MAIN.JSX */
 #root {
   width: 1126px;
   max-width: 100%;

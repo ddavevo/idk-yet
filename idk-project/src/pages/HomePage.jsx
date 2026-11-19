@@ -1,12 +1,14 @@
 import LatticeLoader from '../components/LatticeLoader';
 import BranchedMenu from '../components/BranchedMenu';
+import Header from '../components/Header';
 import './HomePage.css'
 import { Download04Icon, Rocket01Icon, Settings02Icon } from '@hugeicons/core-free-icons';
 
 export function HomePage() {
   return (
-    <section id="center">
-      <LatticeLoader
+    <section>
+      <Header>
+        <LatticeLoader
         status="working"
         label="idk wtv..."
         doneLabel="Done in"
@@ -27,6 +29,7 @@ export function HomePage() {
         color="#e333a9"
       />
 
+      </Header>
       <BranchedMenu
         items={[
           {
