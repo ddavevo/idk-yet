@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* DEFAULT/LIGHT MODE */
 :root {
   --text: #6b6375;
