@@ -38,12 +38,17 @@ export function HomePage() {
               {
                 label: 'Getting started',
                 children: [
-                  { value: 'install', label: 'Installation', icon: <Download size={18} /> },
-                  { value: 'quick', label: 'Quick start', icon: <Rocket size={18} /> },
-                  { value: 'config', label: 'Configuration', icon: <Settings size={18} /> }
+                  { value: '/', label: 'Installation', icon: <Download size={18} /> },
+                  { value: '/', label: 'Quick start', icon: <Rocket size={18} /> },
+                  { value: '/', label: 'Configuration', icon: <Settings size={18} /> }
                 ]
               },
-              { label: 'Components', children: [{ value: 'buttons', label: 'Buttons' }, { value: 'overlays', label: 'Overlays' }] }
+              {
+                label: 'Components', children: [
+                  { value: '/', label: 'Buttons' },
+                  { value: '/', label: 'Overlays' }
+                ]
+              }
             ]}
             defaultOpen={[0]}
             defaultActive="quick"
