@@ -49,19 +49,19 @@ const DEFAULT_ITEMS: BranchedMenuItem[] = [
   {
     label: 'Getting started',
     children: [
-      { value: 'install', label: 'Installation', icon: Download04Icon },
-      { value: 'quick', label: 'Quick start', icon: Rocket01Icon },
-      { value: 'config', label: 'Configuration', icon: Settings02Icon },
-      { value: 'theming', label: 'Theming', icon: PaintBoardIcon }
+      { value: '/', label: 'Installation', icon: Download04Icon },
+      { value: '/', label: 'Quick start', icon: Rocket01Icon },
+      { value: '/', label: 'Configuration', icon: Settings02Icon },
+      { value: '/', label: 'Theming', icon: PaintBoardIcon }
     ]
   },
   {
     label: 'Components',
     children: [
-      { value: 'buttons', label: 'Buttons', icon: CursorPointer01Icon },
-      { value: 'typography', label: 'Typography', icon: TextFontIcon },
-      { value: 'overlays', label: 'Overlays', icon: Layers01Icon },
-      { value: 'toasts', label: 'Toasts', icon: Notification03Icon }
+      { value: '/', label: 'Buttons', icon: CursorPointer01Icon },
+      { value: '/', label: 'Typography', icon: TextFontIcon },
+      { value: '/', label: 'Overlays', icon: Layers01Icon },
+      { value: '/', label: 'Toasts', icon: Notification03Icon }
     ]
   }
 ];
