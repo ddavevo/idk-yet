@@ -78,9 +78,9 @@ const BranchedMenu: React.FC<BranchedMenuProps> = ({
   defaultActive = '',
   onSelect,
   onToggle,
-  color = '#f5f5f5',
-  accentColor = '#f5f5f5',
-  lineColor = '#3f3f46',
+  color="var(--foreground)",
+  accentColor="var(--accent)",
+  lineColor="var(--border)",
   width = 240,
   rowHeight = 36,
   indent = 40,
@@ -158,7 +158,7 @@ const BranchedMenu: React.FC<BranchedMenuProps> = ({
   return (
     <nav
       ref={navRef}
-      className={`relative flex w-fit max-w-[min(var(--bm-w),100%)] flex-col pl-3.5 leading-[1.2] [color:var(--bm-ink)] [font-family:inherit] [font-size:var(--bm-font)] before:absolute before:top-2 before:bottom-0 before:left-0 before:w-0.5 before:rounded-[1px] before:[background:linear-gradient(to_bottom,var(--bm-line)_0%,var(--bm-line)_55%,transparent_100%)] before:content-['']${className ? ` ${className}` : ''}`}
+      className={`temp relative flex w-fit max-w-[min(var(--bm-w),100%)] flex-col pl-3.5 leading-[1.2] [color:var(--bm-ink)] [font-family:inherit] [font-size:var(--bm-font)] before:absolute before:top-2 before:bottom-0 before:left-0 before:w-0.5 before:rounded-[1px] before:[background:linear-gradient(to_bottom,var(--bm-line)_0%,var(--bm-line)_55%,transparent_100%)] before:content-['']${className ? ` ${className}` : ''}`}
       style={
         {
           '--bm-w': `${width}px`,

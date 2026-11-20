@@ -22,9 +22,9 @@ export function Header() {
         step={90}
         idleOpacity={0.15}
         glow
-        glowColor="#ec4899"
+        glowColor="#1d693f"
         showTimer={false}
-        color="#ec4899"
+        color="#1d693f"
       />
 
       <ButtonGroup>

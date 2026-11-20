@@ -39,23 +39,23 @@ export function HomePage() {
                 label: 'Getting started',
                 children: [
                   { value: '/', label: 'Installation', icon: <Download size={18} /> },
-                  { value: '/', label: 'Quick start', icon: <Rocket size={18} /> },
-                  { value: '/', label: 'Configuration', icon: <Settings size={18} /> }
+                  { value: '', label: 'Quick start', icon: <Rocket size={18} /> },
+                  { value: '', label: 'Configuration', icon: <Settings size={18} /> }
                 ]
               },
               {
                 label: 'Components', children: [
                   { value: '/', label: 'Buttons' },
-                  { value: '/', label: 'Overlays' }
+                  { value: '', label: 'Overlays' }
                 ]
               }
             ]}
             defaultOpen={[0]}
             defaultActive="quick"
             onSelect={value => navigate(value)}
-            color="#f5f5f5"
-            accentColor="#f5f5f5"
-            lineColor="#3f3f46"
+            color="var(--foreground)"
+            accentColor="var(--foreground)"
+            lineColor="var(--border)"
             width={240}
             rowHeight={36}
             indent={40}
