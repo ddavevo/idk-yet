@@ -13,8 +13,9 @@
     margin-top: 1rem;
 }
 
-.primary-content-container {
+.primary-content {
     display: flex;
     flex-direction: column;
-    position: relative;
+    
+    padding-left: 2rem;
 }

@@ -1,6 +1,26 @@
+"use client"
+
 import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
-import './HomePage.css'
+
+import BranchedMenu from '@/components/reactbits-dev/BranchedMenu'
+import { Download, Rocket, Settings } from 'lucide-react'
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+import './HomePage.css';
 
 export function HomePage() {
 
@@ -9,28 +29,97 @@ export function HomePage() {
       <Header />
 
       <div className="flex min-h-svh p-6">
-        <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
+
+        <div className="branchedmenu-container">
+          <BranchedMenu
+            items={[
+              {
+                label: 'Getting started',
+                children: [
+                  { value: 'install', label: 'Installation', icon: <Download size={18} /> },
+                  { value: 'quick', label: 'Quick start', icon: <Rocket size={18} /> },
+                  { value: 'config', label: 'Configuration', icon: <Settings size={18} /> }
+                ]
+              },
+              { label: 'Components', children: [{ value: 'buttons', label: 'Buttons' }, { value: 'overlays', label: 'Overlays' }] }
+            ]}
+            defaultOpen={[0]}
+            defaultActive="quick"
+            onSelect={(value, item) => navigate(value)}
+            color="#f5f5f5"
+            accentColor="#f5f5f5"
+            lineColor="#3f3f46"
+            width={240}
+            rowHeight={36}
+            indent={40}
+            trunk={14}
+            radius={10}
+            lineWidth={1.5}
+            fontSize={14}
+            drawDuration={400}
+            foldDuration={300}
+          />
+        </div>
+
+        <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose primary-content">
           <div>
             <h1 className="font-medium">Project ready!</h1>
             <p>You may now add components and start building.</p>
             <p>We&apos;ve already added the button component for you.</p>
-            <Button className="mt-2">Button</Button>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger render={<Button className="mt-2">Press me!</Button>} />
+              <DropdownMenuContent>
+                <DropdownMenuGroup>
+
+                  <DropdownMenuItem>Team</DropdownMenuItem>
+
+                  <DropdownMenuSub>
+                    <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
+
+                    <DropdownMenuPortal>
+
+                      <DropdownMenuSubContent>
+                        <DropdownMenuItem>Email</DropdownMenuItem>
+                        <DropdownMenuItem>Message</DropdownMenuItem>
+
+                        <DropdownMenuSub>
+                          <DropdownMenuSubTrigger>More options</DropdownMenuSubTrigger>
+                          <DropdownMenuPortal>
+
+                            <DropdownMenuSubContent>
+                              <DropdownMenuItem>Calendly</DropdownMenuItem>
+                              <DropdownMenuItem>Slack</DropdownMenuItem>
+                              <DropdownMenuSeparator />
+                              <DropdownMenuItem>Webhook</DropdownMenuItem>
+                            </DropdownMenuSubContent>
+                          </DropdownMenuPortal>
+                        </DropdownMenuSub>
+
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem>Advanced...</DropdownMenuItem>
+
+                      </DropdownMenuSubContent>
+
+                    </DropdownMenuPortal>
+
+                  </DropdownMenuSub>
+
+                  <DropdownMenuItem>
+                    New Team
+                    <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
           </div>
           <div className="font-mono text-xs text-muted-foreground">
             (Press <kbd>d</kbd> to toggle dark mode)
           </div>
         </div>
       </div>
-
-      <div className="homepage-container">
-        <div className="branchedmenu-container">
-        </div>
-
-        <div className="primary-content-container">
-          <Button>Slay</Button>
-        </div>
-      </div>
-
     </>
   )
 }
